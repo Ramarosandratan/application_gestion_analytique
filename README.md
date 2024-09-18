@@ -7,10 +7,12 @@ Ce projet est une application de gestion analytique destinée à la comptabilit�
 ## Fonctionnalités
 
 - **Formulaire de Saisie** :
+
   - Saisie des rubriques, du total, de l'unité d'œuvre et des valeurs associées à chaque partie (ADM/DIST, Usine, Plantation).
   - Sélection du type de coût (Fixe ou Variable) pour chaque partie.
 
 - **Calcul Automatique** :
+
   - Les totaux pour les coûts fixes et variables sont calculés automatiquement en fonction des données saisies.
 
 - **Affichage des Données** :
@@ -29,3 +31,4 @@ Ce projet est une application de gestion analytique destinée à la comptabilit�
 
    ```bash
    git clone https://github.com/votre-utilisateur/nom-du-repo.git
+   ```

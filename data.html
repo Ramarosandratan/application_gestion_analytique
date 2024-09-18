@@ -70,131 +70,171 @@
 
     <!-- Contenu principal -->
     <div class="container mt-4">
-        <h1 class="mb-4">Formulaire de saisie de données</h1>
+      <h1 class="mb-4">Formulaire de saisie de données</h1>
 
-        <!-- Formulaire de saisie de données -->
-        <form id="dataForm">
-            <div class="row mb-3">
-                <div class="col">
-                    <label for="rubrique" class="form-label">Designation</label>
-                    <input type="text" class="form-control" id="rubrique" placeholder="Ex : ACHAT SEMENCES">
-                </div>
-                <div class="col">
-                    <label for="total" class="form-label">Valeurs</label>
-                    <input type="number" class="form-control" id="total" placeholder="Ex : 4321600">
-                </div>
-                <div class="col">
-                    <label for="unite" class="form-label">Unité d'œuvre</label>
-                    <input type="text" class="form-control" id="unite" placeholder="Ex : KG">
-                </div>
-            </div>
-
-            <!-- ADM/DIST Section -->
-            <h5>ADM/DIST</h5>
-            <div class="row mb-3">
-                <div class="col">
-                    <label for="admFixeVar" class="form-label">Type</label>
-                    <select class="form-control" id="admFixeVar">
-                        <option value="Fixe">Fixe</option>
-                        <option value="Variable">Variable</option>
-                    </select>
-                </div>
-                <div class="col">
-                    <label for="admValue" class="form-label">Valeur</label>
-                    <input type="number" class="form-control" id="admValue" placeholder="Montant ADM/DIST">
-                </div>
-            </div>
-
-            <!-- Usine Section -->
-            <h5>Usine</h5>
-            <div class="row mb-3">
-                <div class="col">
-                    <label for="usineFixeVar" class="form-label">Type</label>
-                    <select class="form-control" id="usineFixeVar">
-                        <option value="Fixe">Fixe</option>
-                        <option value="Variable">Variable</option>
-                    </select>
-                </div>
-                <div class="col">
-                    <label for="usineValue" class="form-label">Valeur</label>
-                    <input type="number" class="form-control" id="usineValue" placeholder="Montant Usine">
-                </div>
-            </div>
-
-            <!-- Plantation Section -->
-            <h5>Plantation</h5>
-            <div class="row mb-3">
-                <div class="col">
-                    <label for="plantationFixeVar" class="form-label">Type</label>
-                    <select class="form-control" id="plantationFixeVar">
-                        <option value="Fixe">Fixe</option>
-                        <option value="Variable">Variable</option>
-                    </select>
-                </div>
-                <div class="col">
-                    <label for="plantationValue" class="form-label">Valeur</label>
-                    <input type="number" class="form-control" id="plantationValue" placeholder="Montant Plantation">
-                </div>
-            </div>
-
-            <button type="button" class="btn btn-primary" onclick="ajouterDonnees()">Ajouter</button>
-        </form>
-
-        <!-- Tableau d'affichage des données -->
-        <div class="mt-5">
-            <h2 class="mb-4">Données Saisies</h2>
-            <table class="table table-bordered">
-                <thead class="table-light">
-                    <tr>
-                        <th scope="col">RUBRIQUES</th>
-                        <th scope="col">TOTAL</th>
-                        <th scope="col">UNITE D'ŒUVRE</th>
-                        <th scope="col">ADM/DIST</th>
-                        <th scope="col">USINE</th>
-                        <th scope="col">PLANTATION</th>
-                        <th scope="col">TOTAL FIXE</th>
-                        <th scope="col">TOTAL VARIABLE</th>
-                    </tr>
-                </thead>
-                <tbody id="dataTable">
-                    <!-- Les données saisies seront affichées ici -->
-                </tbody>
-            </table>
+      <!-- Formulaire de saisie de données -->
+      <form id="dataForm">
+        <div class="row mb-3">
+          <div class="col">
+            <label for="rubrique" class="form-label">Designation</label>
+            <input
+              type="text"
+              class="form-control"
+              id="rubrique"
+              placeholder="Ex : ACHAT SEMENCES"
+            />
+          </div>
+          <div class="col">
+            <label for="total" class="form-label">Valeurs</label>
+            <input
+              type="number"
+              class="form-control"
+              id="total"
+              placeholder="Ex : 4321600"
+            />
+          </div>
+          <div class="col">
+            <label for="unite" class="form-label">Unité d'œuvre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="unite"
+              placeholder="Ex : KG"
+            />
+          </div>
         </div>
+
+        <!-- ADM/DIST Section -->
+        <h5>ADM/DIST</h5>
+        <div class="row mb-3">
+          <div class="col">
+            <label for="admFixeVar" class="form-label">Type</label>
+            <select class="form-control" id="admFixeVar">
+              <option value="Fixe">Fixe</option>
+              <option value="Variable">Variable</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="admValue" class="form-label">Valeur</label>
+            <input
+              type="number"
+              class="form-control"
+              id="admValue"
+              placeholder="Montant ADM/DIST"
+            />
+          </div>
+        </div>
+
+        <!-- Usine Section -->
+        <h5>Usine</h5>
+        <div class="row mb-3">
+          <div class="col">
+            <label for="usineFixeVar" class="form-label">Type</label>
+            <select class="form-control" id="usineFixeVar">
+              <option value="Fixe">Fixe</option>
+              <option value="Variable">Variable</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="usineValue" class="form-label">Valeur</label>
+            <input
+              type="number"
+              class="form-control"
+              id="usineValue"
+              placeholder="Montant Usine"
+            />
+          </div>
+        </div>
+
+        <!-- Plantation Section -->
+        <h5>Plantation</h5>
+        <div class="row mb-3">
+          <div class="col">
+            <label for="plantationFixeVar" class="form-label">Type</label>
+            <select class="form-control" id="plantationFixeVar">
+              <option value="Fixe">Fixe</option>
+              <option value="Variable">Variable</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="plantationValue" class="form-label">Valeur</label>
+            <input
+              type="number"
+              class="form-control"
+              id="plantationValue"
+              placeholder="Montant Plantation"
+            />
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="ajouterDonnees()"
+        >
+          Ajouter
+        </button>
+      </form>
+
+      <!-- Tableau d'affichage des données -->
+      <div class="mt-5">
+        <h2 class="mb-4">Données Saisies</h2>
+        <table class="table table-bordered">
+          <thead class="table-light">
+            <tr>
+              <th scope="col">RUBRIQUES</th>
+              <th scope="col">TOTAL</th>
+              <th scope="col">UNITE D'ŒUVRE</th>
+              <th scope="col">ADM/DIST</th>
+              <th scope="col">USINE</th>
+              <th scope="col">PLANTATION</th>
+              <th scope="col">TOTAL FIXE</th>
+              <th scope="col">TOTAL VARIABLE</th>
+            </tr>
+          </thead>
+          <tbody id="dataTable">
+            <!-- Les données saisies seront affichées ici -->
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <script>
-        function ajouterDonnees() {
-            // Récupérer les valeurs du formulaire
-            const rubrique = document.getElementById('rubrique').value;
-            const total = document.getElementById('total').value;
-            const unite = document.getElementById('unite').value;
+      function ajouterDonnees() {
+        // Récupérer les valeurs du formulaire
+        const rubrique = document.getElementById("rubrique").value;
+        const total = document.getElementById("total").value;
+        const unite = document.getElementById("unite").value;
 
-            // Récupérer les valeurs pour ADM/DIST, Usine, et Plantation
-            const admType = document.getElementById('admFixeVar').value;
-            const admValue = parseFloat(document.getElementById('admValue').value) || 0;
+        // Récupérer les valeurs pour ADM/DIST, Usine, et Plantation
+        const admType = document.getElementById("admFixeVar").value;
+        const admValue =
+          parseFloat(document.getElementById("admValue").value) || 0;
 
-            const usineType = document.getElementById('usineFixeVar').value;
-            const usineValue = parseFloat(document.getElementById('usineValue').value) || 0;
+        const usineType = document.getElementById("usineFixeVar").value;
+        const usineValue =
+          parseFloat(document.getElementById("usineValue").value) || 0;
 
-            const plantationType = document.getElementById('plantationFixeVar').value;
-            const plantationValue = parseFloat(document.getElementById('plantationValue').value) || 0;
+        const plantationType =
+          document.getElementById("plantationFixeVar").value;
+        const plantationValue =
+          parseFloat(document.getElementById("plantationValue").value) || 0;
 
-            // Calcul automatique des totaux Fixe et Variable
-            let totalFixe = 0;
-            let totalVariable = 0;
+        // Calcul automatique des totaux Fixe et Variable
+        let totalFixe = 0;
+        let totalVariable = 0;
 
-            if (admType === 'Fixe') totalFixe += admValue;
-            else totalVariable += admValue;
+        if (admType === "Fixe") totalFixe += admValue;
+        else totalVariable += admValue;
 
-            if (usineType === 'Fixe') totalFixe += usineValue;
-            else totalVariable += usineValue;
+        if (usineType === "Fixe") totalFixe += usineValue;
+        else totalVariable += usineValue;
 
-            if (plantationType === 'Fixe') totalFixe += plantationValue;
-            else totalVariable += plantationValue;
+        if (plantationType === "Fixe") totalFixe += plantationValue;
+        else totalVariable += plantationValue;
 
-            // Créer une nouvelle ligne de tableau
-            const newRow = `
+        // Créer une nouvelle ligne de tableau
+        const newRow = `
                 <tr>
                     <td>${rubrique}</td>
                     <td>${total}</td>
@@ -207,12 +247,14 @@
                 </tr>
             `;
 
-            // Ajouter la nouvelle ligne au tableau
-            document.getElementById('dataTable').insertAdjacentHTML('beforeend', newRow);
+        // Ajouter la nouvelle ligne au tableau
+        document
+          .getElementById("dataTable")
+          .insertAdjacentHTML("beforeend", newRow);
 
-            // Réinitialiser le formulaire
-            document.getElementById('dataForm').reset();
-        }
+        // Réinitialiser le formulaire
+        document.getElementById("dataForm").reset();
+      }
     </script>
 
     <!-- Script Bootstrap et Chart.js -->
